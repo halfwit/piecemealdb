@@ -1,0 +1,54 @@
+FOOD_DES example:
+
+~01001~^~0100~^~Butter, salted~^~BUTTER,WITH SALT~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87 Breakdown:
+
+~01001~     NDB_No          Nutrient Databank number
+~0100~      FdGrp_Cd        Food group code
+~Butte..~   Long_Desc       Long Description
+~BUTTE..~   Shrt_Desc       Short Description
+~~          ComName         Other common names
+~~          ManufacName     Manufacturers name
+~Y~         Survey          Used in survey
+~~          Ref_desc        inedible parts
+0           Refuse          percent of refuse
+~~          SciName         Scientific name
+6.38        N_Factor        Nitrogen conversion factor
+4.27        Pro_Factor      For calculating protiens -> calories
+8.79        Fat_Factor      For calculating fat -> calories
+3.87        CHO_Factor      For calculating carbs -> calories
+
+
+NUT_DATA example:
+
+~01040~^~672~^0.000^12^0.000^~1~^~A~^~~^~~^1^0.006^0.007^10^0.000^0.001^~1,
+2, 3~^02/2015^ ~01040~
+
+NDB_No      Nutrient        Databank number ~672~
+Nutr_No     Unique 3        digit code for nutrient
+0.000       Nutr_val        Amount in 100 Grams
+12          Num_Data_Pts    Number points for nutritional value
+0.000       Std_Error       Standard error of the mean
+~1~         Src_Cd          Code indicating type of data
+~A~         Deriv_Cd        Data derivation code
+~~          Ref_NDB_No      NDB number of missing values
+~~          Add_Nutr_Mark   Indicates vitamin/mineral added
+1           Num_Studies     Number of studies
+0.006       Min             Minimum Value
+0.007       Max             Maxmimum Value
+10          DF              Degrees of freedom
+0.000       Low_EB          Low error bound
+0.001       Up_EB           Upper error bound
+~1, 2, 3~   Stat_cmt        Statisticalcomments
+02/2015     AddMod_Date     Date added/modified
+
+
+WEIGHT example:
+
+~01001~^2^1^~tbsp~^14.2^^
+~01001~     NDB_No          Nutrient Databank number
+2           Seq             Sequence number
+1           Amount          Unit modifier (ie "1 cup")
+~tbsp~      Msre_Desc       Description of measure
+14.2        Gm_Wgt          Gram weight
+-           Num_Data_pts    Number of Data points
+-           Stf_Dev         StandardDeviation
