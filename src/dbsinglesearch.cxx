@@ -43,12 +43,12 @@ int main(int argc, char **argv)
     try {
         // Make the database
         Xapian::Database db(argv[1]);
-
         // Start an enquire session
+        vector<string> subqs;
         Xapian::Enquire enquire(db);
-
+        subqs.assign(argv + 1, argv + argc);
         // Build the query object
-        Xapian::Query query(Xapian::Query::OP_OR, argv + 2, argv + argc);
+        Xapian::Query query(Xapian::Query::OP_ELITE_SET, subqs.begin(), subqs.end(), 4);
         cout << "Performing query `" << query.get_description() << "'" << endl;
 
         // Give the query object to the enquire session
